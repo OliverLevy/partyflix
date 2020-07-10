@@ -1,0 +1,13 @@
+@import 'variables';
+
+@mixin desktopSize {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin tabletSize {
+    @media (min-width: $tablet) {
+        @content;
+    }
+}

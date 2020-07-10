@@ -1,0 +1,109 @@
+@import '../../components/reusable-styling/fonts';
+@import '../../components/reusable-styling/mixins';
+@import '../../components/reusable-styling/variables';
+
+.player{
+    font-family: Roboto;
+    
+    &__header{
+        color: $white;
+        width: 100%;
+        font-size: 48px;
+        text-transform: capitalize;
+        margin-left: 28px;
+        margin-bottom: 20px;
+       
+    }
+
+    &__container1{
+        display: flex;
+        align-items: center;
+    }
+
+    &__container2{
+
+    }
+
+    &__video{
+
+
+        &--poster{
+            width: 800px;
+            height: auto;
+            margin: auto 26px;
+            border-radius: 10px;
+        }
+    }
+
+    &__viewers{
+
+        &--image{
+            width: 150px;
+            height: auto;
+            border: 2px solid $yellow;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+    }
+
+    &__controls{
+        background-color: $blue;
+        border-radius: 5px;
+        width: fit-content;
+        padding: 10px 30px;
+        margin-left: 26px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--img{
+            margin: auto 20px;
+        }
+    }
+
+    &__chat{
+        margin-left: 26px;
+        background-color: $white;
+        color: $black;
+        border-radius: 10px;
+        padding: 10px;
+
+        &--header{
+            text-align: center;
+        }
+
+        & span{
+            font-weight: 700;
+        }
+    }
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    font-family: Roboto;
+}
+
+input{
+    border: 1px solid $black;
+    border-radius: 10px;
+    height: 40px;
+    width: 60%;
+    padding-left: 30px;
+    margin-top: 30px;
+}
+
+button{
+    width: 30%;
+    height: 40px;
+    background-color: $blue;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+

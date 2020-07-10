@@ -1,0 +1,20 @@
+@import './components/reusable-styling/fonts';
+@import './components/reusable-styling/variables';
+@import './components/reusable-styling/mixins';
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.main{
+  font-family: Roboto;
+  background-color: $black;
+  color: $white;
+  padding: 2.5rem;
+}
+
+.title{
+  color: $blue;
+}
