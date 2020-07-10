@@ -8,23 +8,21 @@ const posterSmall = "http://image.tmdb.org/t/p/w300";
 
 export default class Gallery extends React.Component {
   render() {
-    const list = this.props.list.results;
-    const genreList = this.props.genres;
+    let list = this.props.list.results;
+    let genreList = this.props.genres;
     if (this.props.list.length === 0 && this.props.genres.length === 0) {
       return <h3>loading</h3>;
     } else {
       return (
         <div>
           <h2>Pick a movie!</h2>
-
           <div className="gallery">
             {list.map((item) => {
-              const currentMovieGenres = item.genre_ids;
-              const movieGenre = currentMovieGenres.map((genreId) => {
+              let currentMovieGenres = item.genre_ids;
+              let movieGenre = currentMovieGenres.map((genreId) => {
                 let output = genreList.filter(
                   (genreItem) => genreItem.id === genreId
                 );
-
                 return output;
               });
 
@@ -36,7 +34,6 @@ export default class Gallery extends React.Component {
                     </p>
                   );
                 });
-                
 
                 return (
                   <div key={item.id} className="gallery__item">
