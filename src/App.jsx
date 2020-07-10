@@ -1,10 +1,8 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Link,
   BrowserRouter,
+  Route,
+  Switch
 } from "react-router-dom";
 import Gallery from "./components/Gallery";
 import VideoPlayer from "./components/videoPlayer/VideoPlayer";
@@ -18,11 +16,7 @@ import "./App.scss";
 
 const url = "https://api.themoviedb.org/3";
 const api_key = "?api_key=24b5809ca6dc4a670e6e033f96229227";
-const topRated = "/movie/top_rated";
 const popular = "/movie/popular";
-const latest = "/movie/latest";
-const posterSmall = "http://image.tmdb.org/t/p/w300";
-const posterLarge = "http://image.tmdb.org/t/p/original";
 
 class App extends React.Component {
   state = {

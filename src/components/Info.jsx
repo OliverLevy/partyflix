@@ -1,8 +1,6 @@
 import React from "react";
 import "./Info.scss";
 import { Link } from "react-router-dom";
-import playbtn from "../assets/icons/Icon-play.svg";
-import infobtn from "../assets/icons/Icon-info.svg";
 import backbtn from "../assets/icons/Icon-back-arrow.svg";
 
 const posterLarge = "http://image.tmdb.org/t/p/original";
@@ -14,7 +12,7 @@ export default function Info(props) {
     console.log(props.genres);
     const pageId = props.match.params.id;
     const list = props.movieGallery.results;
-    const output = list.filter((item) => item.id == pageId);
+    const output = list.filter((item) => item.id === Number(pageId));
     const movie = output[0];
     console.log(movie);
     const allGenres = props.genres;

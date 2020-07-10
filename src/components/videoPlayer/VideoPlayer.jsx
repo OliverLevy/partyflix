@@ -23,7 +23,7 @@ export default class VideoPlayer extends React.Component {
     } else {
       const currentVideoId = this.props.match.params.id;
       const videoList = list.results;
-      const output = videoList.filter((item) => item.id == currentVideoId);
+      const output = videoList.filter((item) => item.id === Number(currentVideoId));
       const vid =output[0]
       console.log(output);
       return (

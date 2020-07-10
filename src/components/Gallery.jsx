@@ -5,7 +5,6 @@ import playbtn from "../assets/icons/Icon-play.svg";
 import infobtn from "../assets/icons/Icon-info.svg";
 
 const posterSmall = "http://image.tmdb.org/t/p/w300";
-const posterLarge = "http://image.tmdb.org/t/p/original";
 
 export default class Gallery extends React.Component {
   render() {
@@ -20,9 +19,7 @@ export default class Gallery extends React.Component {
 
           <div className="gallery">
             {list.map((item) => {
-              // console.log("genre list", genreList)
               const currentMovieGenres = item.genre_ids;
-              // console.log("current movie genre", currentMovieGenres)
               const movieGenre = currentMovieGenres.map((genreId) => {
                 let output = genreList.filter(
                   (genreItem) => genreItem.id === genreId
